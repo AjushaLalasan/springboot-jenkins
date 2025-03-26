@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build Maven') {
             steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AjushaLalasan/springboot_jenkins_docker_kubernetes']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AjushaLalasan/springboot-jenkins-docker']])
                 bat 'mvn clean install'
             }
         }
